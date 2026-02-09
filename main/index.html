@@ -5,28 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planilha de Organizacao Financeira 360</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --cyan: #00bcd4;
-      --cyan-dark: #0097a7;
-      --cyan-soft: #e6f9fb;
-    }
-    body {
-      background: radial-gradient(1200px 600px at 10% -10%, #e6f9fb 0%, #ffffff 60%);
-    }
-    .glow {
-      box-shadow: 0 20px 40px rgba(0, 188, 212, 0.18);
-    }
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 600ms ease, transform 600ms ease;
-    }
-    .reveal.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body class="text-slate-800">
   <main class="max-w-6xl mx-auto px-6 lg:px-10">
@@ -219,19 +198,6 @@
     </section>
   </main>
 
-  <script>
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    revealEls.forEach((el) => observer.observe(el));
-  </script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
